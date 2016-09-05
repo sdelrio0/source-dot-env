@@ -1,0 +1,25 @@
+{
+  "name": "source-dot-env",
+  "version": "0.1.0",
+  "description": "Tiny library to load (bash) sourceable .env files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive __tests__/",
+    "test:watch": "npm run test -- -w"
+  },
+  "keywords": [
+    "bash",
+    "source",
+    "sourceable",
+    "env",
+    "dot",
+    "environment",
+    "shell"
+  ],
+  "author": "Sergio <sdelrio0@gmail.com> (http://xilix.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
