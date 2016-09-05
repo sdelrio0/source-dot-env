@@ -6,7 +6,13 @@
   "scripts": {
     "test": "mocha --recursive __tests__/",
     "test:watch": "npm run test -- -w",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "cover": "nyc --reporter=lcov npm run test",
+    "cover:report": "npm run cover && nyc report",
+    "cover:report:check": "npm run cover:report && npm run check-coverage",
+    "check-coverage": "nyc check-coverage --statements 10 --branches 10 --functions 10 --lines 10",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "docs": "esdoc -c ./esdoc.json"
   },
   "keywords": [
     "bash",
@@ -32,7 +38,9 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
+    "esdoc": "^0.4.8",
     "mocha": "^3.0.2",
+    "nyc": "^8.1.0",
     "semantic-release": "^4.3.5"
   }
 }
