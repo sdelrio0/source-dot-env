@@ -4,7 +4,6 @@ Tiny library to load (bash) sourceable .env files.
 
 [![Travis build](https://img.shields.io/travis/sdelrio0/source-dot-env.svg?style=flat)](https://travis-ci.org/sdelrio0/source-dot-env)
 [![Codecov coverage](https://img.shields.io/codecov/c/github/sdelrio0/source-dot-env.svg?style=flat)]()
-[![Documentation](https://doc.esdoc.org/github.com/sdelrio0/source-dot-env/badge.svg)](https://doc.esdoc.org/github.com/sdelrio0/source-dot-env/)
 [![npm version](https://img.shields.io/npm/v/source-dot-env.svg?style=flat)](https://www.npmjs.com/package/source-dot-env)
 [![npm licence](https://img.shields.io/npm/l/source-dot-env.svg?style=flat)](https://en.wikipedia.org/wiki/MIT_License)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat)](https://github.com/semantic-release/semantic-release)
