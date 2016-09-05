@@ -26,7 +26,9 @@ var fs = require('fs');
  * @param {string} fileName - File name, relative to the current working directory
  * @returns {object} - The updated variables
  */
-module.exports = (fileName = '.env') => {
+module.exports = function(fileName) {
+  if(!fileName) fileName = '.env';
+  
   var filePath = path.join(process.cwd(), fileName);
   var fileContents = fs.readFileSync(filePath, {encoding: 'utf-8'});
   
