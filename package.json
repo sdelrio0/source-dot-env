@@ -1,11 +1,12 @@
 {
+  "version": "0.0.0-semantically-released",
   "name": "source-dot-env",
-  "version": "0.1.0",
   "description": "Tiny library to load (bash) sourceable .env files.",
   "main": "index.js",
   "scripts": {
     "test": "mocha --recursive __tests__/",
-    "test:watch": "npm run test -- -w"
+    "test:watch": "npm run test -- -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "bash",
@@ -31,6 +32,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "semantic-release": "^4.3.5"
   }
 }
