@@ -16,6 +16,17 @@
     "environment",
     "shell"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdelrio0/source-dot-env.git"
+  },
+  "files": [
+    "__tests__",
+    "README.md",
+    "index.js",
+    ".env",
+    ".env.sh"
+  ],
   "author": "Sergio <sdelrio0@gmail.com> (http://xilix.io/)",
   "license": "MIT",
   "devDependencies": {
