@@ -61,3 +61,12 @@ describe('SOURCEABLE .env file', function() {
     expect(resultingEnv).to.eql(expectedMap);
   });
 });
+
+describe('NON_EXISTENT .env file', function() {
+  const expectedMap = {};
+  
+  it('doesn\'t throw', function() {
+    const resultingEnv = env('.env.doesnt-exist');
+    expect(resultingEnv).to.eql(expectedMap);
+  });
+});
