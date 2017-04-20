@@ -30,7 +30,7 @@ var fs = require('fs');
 module.exports = function(fileName) {
   if(!fileName) fileName = '.env';
   
-  var filePath = path.join(process.cwd(), fileName);
+  var filePath = path.isAbsolute(fileName) ? fileName : path.join(process.cwd(), fileName);
   var fileContents = fs.readFileSync(filePath, {encoding: 'utf-8'});
   
   let env = {};
