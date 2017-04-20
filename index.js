@@ -30,10 +30,14 @@ var fs = require('fs');
 module.exports = function(fileName) {
   if(!fileName) fileName = '.env';
   
+  let env = {};
   var filePath = path.join(process.cwd(), fileName);
+  if (!fs.existsSync(filePath)) {
+    // don't throw if no .env file is present
+    return env;
+  }
   var fileContents = fs.readFileSync(filePath, {encoding: 'utf-8'});
   
-  let env = {};
   fileContents
     .split('\n')
     .map(l => l.split('#')[0] || '')
