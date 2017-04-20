@@ -1,5 +1,6 @@
 'use strict';
 const expect = require('chai').expect;
+const path = require('path');
 const env = require('../index.js');
 
 beforeEach(function() {
@@ -57,6 +58,27 @@ describe('SOURCEABLE .env file', function() {
   
   it('returns correct variables', function() {
     const resultingEnv = env('.env.sh');
+    
+    expect(resultingEnv).to.eql(expectedMap);
+  });
+});
+
+describe('SOURCEABLE .env absolute path', function() {
+  const expectedMap = {
+    TEST_VAR: 'value',
+  };
+  const expectedEnv = {
+    TEST_VAR: 'value',
+  };
+  
+  it('sets the environment', function() {
+    const resultingEnv = env(path.join(__dirname, '.test-dotenv'));
+    
+    expect(process.env.TEST_VAR).to.equal(expectedEnv.TEST_VAR);
+  });
+  
+  it('returns correct variables', function() {
+    const resultingEnv = env(path.join(__dirname, '.test-dotenv'));
     
     expect(resultingEnv).to.eql(expectedMap);
   });
